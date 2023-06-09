@@ -13,13 +13,20 @@ resource "azuredevops_branch_policy_build_validation" "plan" {
     filename_patterns = [
       "/src/terraform/*"
     ]
-
     scope {
-      repository_id  = azuredevops_git_repository.main.id
-      repository_ref = azuredevops_git_repository.main.default_branch
-      match_type     = "Exact"
+      match_type = "DefaultBranch"
     }
+  }
+}
+resource "azuredevops_branch_policy_comment_resolution" "main" {
 
+  for_each = var.environments
+
+  project_id = var.project_id
+  enabled    = true
+  blocking   = true
+
+  settings {
     scope {
       match_type = "DefaultBranch"
     }
