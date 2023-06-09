@@ -3,7 +3,7 @@ data "azuredevops_project" "infra" {
 }
 
 module "azure_credentials" {
-  source = "../../../var-group/azure-credential"
+  source = "../../../modules/var-group/azure-credential"
 
   project_id = data.azuredevops_project.infra.id
   name       = "foo"

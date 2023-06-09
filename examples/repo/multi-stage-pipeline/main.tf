@@ -19,7 +19,7 @@ resource "azuredevops_project" "test" {
 }
 
 module "multi_stage_repo" {
-  source = "../../../repo/multi-stage-terraform"
+  source = "../../../modules/repo/multi-stage-terraform"
 
   application_name = local.application_name
   project_id       = azuredevops_project.test.id
