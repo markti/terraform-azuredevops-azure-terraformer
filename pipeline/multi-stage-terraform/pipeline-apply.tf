@@ -1,10 +1,7 @@
 resource "azuredevops_build_definition" "apply" {
-
-  for_each = var.environments
-
   project_id = var.project_id
   name       = "apply"
-  path       = "\\${var.application_name}\\${each.key}"
+  path       = "\\${var.application_name}\\${var.environment_name}"
 
   ci_trigger {
     use_yaml = false
@@ -12,15 +9,15 @@ resource "azuredevops_build_definition" "apply" {
 
   repository {
     repo_type   = "TfsGit"
-    repo_id     = azuredevops_git_repository.main.id
-    branch_name = azuredevops_git_repository.main.default_branch
+    repo_id     = var.repo_id
+    branch_name = var.default_branch
     yml_path    = ".azdo-pipelines/terraform-multi-stage.yaml"
   }
 
   # 6 clicks
   variable_groups = [
-    module.azure_credentials[each.key].id,
-    module.azure_backends[each.key].id
+    module.azure_credential.id,
+    module.azure_backend.id
   ]
 
   variable {
@@ -29,7 +26,7 @@ resource "azuredevops_build_definition" "apply" {
   }
   variable {
     name  = "EnvironmentName"
-    value = each.key
+    value = var.environment_name
   }
   variable {
     name  = "WorkingDirectory"

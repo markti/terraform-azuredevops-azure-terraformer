@@ -27,12 +27,12 @@ module "multi_stage_repo" {
 
   environments = {
     dev = {
-      azure_credentials = local.sub1_creds
-      azure_backends    = local.sub1_backend
+      azure_credential = local.sub1_creds
+      azure_backend    = local.sub1_backend
     }
     prod = {
-      azure_credentials = local.sub1_creds
-      azure_backends    = local.sub1_backend
+      azure_credential = local.sub1_creds
+      azure_backend    = local.sub1_backend
     }
   }
 
