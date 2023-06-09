@@ -1,2 +1,14 @@
 # azdo-terraform-modules
 A collection of Terraform modules that provision to Azure DevOps
+
+## Release History
+
+**1.0.2**
+- Added Branch Policy to run Terraform Plan pipelines when /src/terraform files changed
+
+**1.0.1**
+- Added Multi-Stage Pipeline Repo and Pipeline
+- Added Azure Backend Var Group
+
+**1.0.0**
+- Added variable group baseline module and Azure Credential Var Group

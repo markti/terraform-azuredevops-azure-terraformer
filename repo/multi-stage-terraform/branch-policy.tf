@@ -1,4 +1,4 @@
-resource "azuredevops_branch_policy_build_validation" "pipeline_plan" {
+resource "azuredevops_branch_policy_build_validation" "plan" {
 
   for_each = var.environments
 
@@ -7,8 +7,8 @@ resource "azuredevops_branch_policy_build_validation" "pipeline_plan" {
   blocking   = true
 
   settings {
-    display_name        = "Example build validation policy"
-    build_definition_id = module.pipeline[*].plan_build_definition_id
+    display_name        = "Terraform Plan on ${each.key} environment"
+    build_definition_id = module.pipeline[each.key].plan_build_definition_id
     valid_duration      = 720
     filename_patterns = [
       "/src/terraform/*"
