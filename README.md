@@ -3,6 +3,9 @@ A collection of Terraform modules that provision to Azure DevOps
 
 ## Release History
 
+**1.0.3**
+- Added Comment Resolution and cleaned up Target Branch Scoping
+
 **1.0.2**
 - Added Branch Policy to run Terraform Plan pipelines when /src/terraform files changed
 
