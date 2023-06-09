@@ -3,6 +3,9 @@ A collection of Terraform modules that provision to Azure DevOps
 
 ## Release History
 
+**1.0.4**
+- Added Min Reviewers, Work Item Linking, Merge Types 
+
 **1.0.3**
 - Added Comment Resolution and cleaned up Target Branch Scoping
 

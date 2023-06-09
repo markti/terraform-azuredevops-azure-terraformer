@@ -26,3 +26,15 @@ variable "project_id" {
 variable "repo_name" {
   type = string
 }
+variable "min_reviewers_enabled" {
+  type    = bool
+  default = true
+}
+variable "min_reviewer_count" {
+  type    = number
+  default = 2
+}
+variable "work_item_linking_enabled" {
+  type    = bool
+  default = false
+}
