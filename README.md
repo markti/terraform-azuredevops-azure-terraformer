@@ -2,6 +2,8 @@
 A collection of Terraform modules that provision to Azure DevOps
 
 ## Release History
+**1.0.7**
+- Patch to remove branch policy conflict
 
 **1.0.6**
 - Organized into modules folder
