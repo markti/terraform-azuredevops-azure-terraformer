@@ -56,13 +56,19 @@ resource "azuredevops_branch_policy_min_reviewers" "main" {
   enabled    = var.min_reviewers_enabled
   blocking   = true
 
+  /*
+  
+  If on_push_reset_all_votes is true then on_push_reset_approved_votes will be set to true. 
+  
+  To enable on_push_reset_approved_votes, 
+    you need explicitly set on_push_reset_all_votes false or not configure.
+*/
   settings {
     reviewer_count                         = var.min_reviewer_count
     submitter_can_vote                     = false
     last_pusher_cannot_approve             = true
     allow_completion_with_rejects_or_waits = false
     on_push_reset_approved_votes           = true
-    on_last_iteration_require_vote         = false
 
     scope {
       match_type = "DefaultBranch"
