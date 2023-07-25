@@ -1,5 +1,5 @@
 # azdo-terraform-modules
-A collection of Terraform modules that provision to Azure DevOps
+A collection of Terraform modules that provision to Azure DevOps.
 
 ## Release History
 **1.0.7**

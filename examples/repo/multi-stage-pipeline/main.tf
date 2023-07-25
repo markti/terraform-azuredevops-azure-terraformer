@@ -1,38 +1,24 @@
-locals {
-  application_name = "test123"
-  sub1_creds = {
-    client_id       = "foo"
-    client_secret   = "foo"
-    tenant_id       = "foo"
-    subscription_id = "foo"
-  }
-  sub1_backend = {
-    resource_group  = "foo"
-    storage_account = "foo"
-    container       = "foo"
-  }
-}
-
 resource "azuredevops_project" "test" {
-  name        = local.application_name
+  name        = var.project_name
   description = "Project Description"
 }
 
 module "multi_stage_repo" {
   source = "../../../modules/repo/multi-stage-terraform"
 
-  application_name = local.application_name
+  application_name = var.application_name
   project_id       = azuredevops_project.test.id
   repo_name        = "test-terraform"
+  reviewers        = var.reviewers
 
   environments = {
     dev = {
-      azure_credential = local.sub1_creds
-      azure_backend    = local.sub1_backend
+      azure_credential = var.dev_subscription
+      azure_backend    = var.dev_backend
     }
     prod = {
-      azure_credential = local.sub1_creds
-      azure_backend    = local.sub1_backend
+      azure_credential = var.prod_subscription
+      azure_backend    = var.prod_backend
     }
   }
 

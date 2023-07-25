@@ -32,9 +32,12 @@ variable "min_reviewers_enabled" {
 }
 variable "min_reviewer_count" {
   type    = number
-  default = 2
+  default = 1
 }
 variable "work_item_linking_enabled" {
   type    = bool
   default = false
+}
+variable "reviewers" {
+  type = list(string)
 }

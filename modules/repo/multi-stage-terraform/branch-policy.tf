@@ -8,6 +8,7 @@ locals {
   }
 }
 
+
 module "branching_policy" {
   source = "../../branch-policy/multi-stage-terraform"
 
@@ -16,5 +17,6 @@ module "branching_policy" {
   min_reviewers_enabled     = var.min_reviewers_enabled
   min_reviewer_count        = var.min_reviewer_count
   work_item_linking_enabled = var.work_item_linking_enabled
+  reviewer_group_id         = module.reviewer_group.origin_id
 
 }
