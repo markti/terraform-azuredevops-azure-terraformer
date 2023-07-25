@@ -10,3 +10,8 @@ resource "azuredevops_git_repository" "main" {
   }
 
 }
+
+data "azuredevops_users" "main" {
+  count          = length(var.reviewers)
+  principal_name = var.reviewers[count.index]
+}

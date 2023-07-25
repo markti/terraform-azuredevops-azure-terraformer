@@ -1,0 +1,20 @@
+users = [
+  {
+    "id" = "users#mhuD3sXszoMROdII8sQqcFD3lVU="
+    "origin" = tostring(null)
+    "origin_id" = tostring(null)
+    "principal_name" = "mark@foo.com"
+    "subject_types" = toset(null) /* of string */
+    "users" = toset([
+      {
+        "descriptor" = "aad.ZTFiZWFiNDMtMTllMC03YjZhLWFmMTUtZjBjZGQ4MzUyM2Yy"
+        "display_name" = "Mark Tinderholt"
+        "id" = "e1beab43-19e0-6b6a-af15-f0cdd83523f2"
+        "mail_address" = "mark@foo.com"
+        "origin" = "aad"
+        "origin_id" = "43072cf2-ef02-43cb-99b5-c480a67550f0"
+        "principal_name" = "mark@foo.com"
+      },
+    ])
+  },
+]
