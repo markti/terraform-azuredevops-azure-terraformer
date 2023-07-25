@@ -2,6 +2,14 @@
 A collection of Terraform modules that provision to Azure DevOps.
 
 ## Release History
+**1.0.8**
+- Upgraded to 0.7.0 of the `azuredevops` provider
+- Cleaned up `var-group\azure-credential` example
+- Cleaned up `repo\multi-stage-pipeline` example
+- Added example for `azuredevops_users` resource
+- Added new module `group\baseline` to create a User Group
+- Changed min reviewer defaults from `2` to `1`
+
 **1.0.7**
 - Patch to remove branch policy conflict
 
