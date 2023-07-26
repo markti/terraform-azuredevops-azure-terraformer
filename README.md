@@ -34,3 +34,28 @@ A collection of Terraform modules that provision to Azure DevOps.
 
 **1.0.0**
 - Added variable group baseline module and Azure Credential Var Group
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
