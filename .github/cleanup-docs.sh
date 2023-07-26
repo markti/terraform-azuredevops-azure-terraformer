@@ -1,0 +1,1 @@
+find ./modules -type f -iname "*.md" -exec rm {} \;

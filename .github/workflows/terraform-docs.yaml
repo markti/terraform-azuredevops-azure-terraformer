@@ -14,7 +14,5 @@ jobs:
     - name: Generate TF docs
       uses: terraform-docs/gh-actions@v1.0.0
       with:
-        working-dir: .
-        recursive: true
-        recursive-path: modules
+        find-dir: find ./modules -name \*.tf
         git-push: true
