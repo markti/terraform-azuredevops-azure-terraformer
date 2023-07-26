@@ -7,7 +7,7 @@ variable "name" {
 }
 variable "description" {
   type        = string
-  description = "foo2"
+  description = "Azure DevOps User Group Description"
 }
 variable "members" {
   type = list(string)
