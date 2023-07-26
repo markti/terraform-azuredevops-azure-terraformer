@@ -23,8 +23,9 @@ jobs:
 
       - name: Install Terraform Docs
         run: |
-          sudo apt-get update
-          sudo apt-get install -y terraform-docs
+          curl -sSLo ./terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/v0.16.0/terraform-docs-v0.16.0-linux-amd64.tar.gz
+          tar -xzf terraform-docs.tar.gz
+          chmod +x terraform-docs
 
       - name: Load module paths
         id: load_module_paths
