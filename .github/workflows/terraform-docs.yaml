@@ -2,8 +2,7 @@ name: Terraform Docs
 
 on:
   pull_request:
-    branches:on:
-  - pull_request
+  
 jobs:
   docs:
     runs-on: ubuntu-latest
