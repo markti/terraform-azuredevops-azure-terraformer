@@ -1,7 +1,0 @@
-modules/var-group/baseline
-modules/var-group/azure-credential
-modules/var-group/azure-backend
-modules/repo/multi-stage-terraform
-modules/pipeline/multi-stage-terraform
-modules/group/baseline
-modules/branch-policy/multi-stage-terraform

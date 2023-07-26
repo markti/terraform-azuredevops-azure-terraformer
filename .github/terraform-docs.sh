@@ -1,0 +1,1 @@
+find modules -type f -name "*.tf" -exec dirname {} \; | sort -u | xargs -I {} terraform-docs {} > /dev/null
