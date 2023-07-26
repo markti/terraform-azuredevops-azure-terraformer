@@ -9,7 +9,8 @@ variable "project_id" {
   description = "Azure DevOps Project ID"
 }
 variable "repo_id" {
-  type = string
+  type        = string
+  description = "foo"
 }
 variable "default_branch" {
   type = string
