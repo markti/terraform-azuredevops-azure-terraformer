@@ -2,55 +2,18 @@ name: Terraform Docs
 
 on:
   pull_request:
-    branches:
-      - main  # Replace 'main' with the desired target branch
-
+    branches:on:
+  - pull_request
 jobs:
-  terraform_docs:
-    name: Terraform Docs
+  docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Configure Git
-        env:
-          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
-          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
-        run: |
-          git config --local user.email "$GIT_USER_EMAIL"
-          git config --local user.name "$GIT_USER_NAME"
-
-      - name: Install Terraform Docs
-        run: |
-          curl -sSLo ./terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/v0.16.0/terraform-docs-v0.16.0-linux-amd64.tar.gz
-          tar -xzf terraform-docs.tar.gz
-          chmod +x terraform-docs
-
-      - name: Load module paths
-        id: load_module_paths
-        run: |
-          # Read the modules.manifest file into an array
-          mapfile -t MODULE_PATHS < modules.manifest
-          # Remove any leading/trailing whitespace from each path
-          MODULE_PATHS=( "${MODULE_PATHS[@]/#/}" )
-          MODULE_PATHS=( "${MODULE_PATHS[@]/%#/}" )
-          echo "::set-output name=paths::${MODULE_PATHS[*]}"
-
-      - name: Generate Terraform Docs
-        run: |
-          # Use the module paths loaded from the previous step
-          for path in ${{ steps.load_module_paths.outputs.paths }}; do
-            ./terraform-docs markdown "$path" > "$path/README.md"
-          done
-
-      - name: Commit changes
-        run: |
-          git add ./**/*.md
-          git diff --quiet || git commit -m "Update Terraform documentation [skip ci]"  # Only commit if there are changes
-          
-      - name: Push changes to pull request branch
-        run: |
-          BRANCH_NAME=${GITHUB_REF#refs/pull/}  # Extract the pull request number from GITHUB_REF
-          BRANCH_NAME=${BRANCH_NAME%/merge}  # Remove the '/merge' suffix
-          git push --force "https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${BRANCH_NAME}
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+    - name: Generate TF docs
+      uses: terraform-docs/gh-actions@v1.0.0
+      with:
+        working-dir: .
+        recursive: true
+        recursive-path: modules
