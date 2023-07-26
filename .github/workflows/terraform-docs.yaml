@@ -1,0 +1,38 @@
+name: Terraform Docs
+
+on:
+  push:
+    paths:
+      - '**/*.tf'  # Adjust the path pattern as per your Terraform files location
+
+jobs:
+  terraform_docs:
+    name: Terraform Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        env:
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+        run: |
+          git config --local user.email "$GIT_USER_EMAIL"
+          git config --local user.name "$GIT_USER_NAME"
+
+      - name: Install Terraform Docs
+        run: curl -L "$(curl -s https://api.github.com/repos/terraform-docs/terraform-docs/releases/latest | jq -r '.assets[] | select(.name | test("terraform-docs-linux-amd64")) | .browser_download_url')" > terraform-docs && chmod +x terraform-docs
+
+      - name: Generate Terraform Docs
+        run: |
+          # Define the module paths you want to generate documentation for
+          MODULE_PATHS=("path/to/module1" "path/to/module2" "path/to/module3")
+          for path in "${MODULE_PATHS[@]}"; do
+            ./terraform-docs markdown "$path" > "$path/README.md"
+          done
+
+      - name: Commit changes
+        run: |
+          git add ./**/*.md
+          git commit -m "Update Terraform documentation [skip ci]"
