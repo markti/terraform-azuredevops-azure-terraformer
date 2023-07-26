@@ -25,10 +25,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `""` | no |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Azure DevOps Variable Group Description | `string` | `""` | no |
+| <a name="input_name"></a> [name](#input\_name) | Azure DevOps Variable Group Name | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Azure DevOps Project ID | `string` | n/a | yes |
-| <a name="input_variables"></a> [variables](#input\_variables) | n/a | <pre>list(<br>    object({<br>      name      = string<br>      value     = string<br>      is_secret = optional(bool, false)<br>    })<br>  )</pre> | n/a | yes |
+| <a name="input_variables"></a> [variables](#input\_variables) | List of variables to be created within Azure DevOps Variable Group | <pre>list(<br>    object({<br>      name      = string<br>      value     = string<br>      is_secret = optional(bool, false)<br>    })<br>  )</pre> | n/a | yes |
 
 ## Outputs
 

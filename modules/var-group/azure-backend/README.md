@@ -23,9 +23,9 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_azure_backend"></a> [azure\_backend](#input\_azure\_backend) | n/a | <pre>object({<br>    resource_group  = string<br>    storage_account = string<br>    container       = string<br>  })</pre> | n/a | yes |
+| <a name="input_azure_backend"></a> [azure\_backend](#input\_azure\_backend) | Terraform State configuration for an Azure Blob Storage Backend | <pre>object({<br>    resource_group  = string<br>    storage_account = string<br>    container       = string<br>  })</pre> | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Azure DevOps Variable Group Description | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | Azure DevOps Variable Group Name | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Azure DevOps Project ID | `string` | n/a | yes |
 
 ## Outputs

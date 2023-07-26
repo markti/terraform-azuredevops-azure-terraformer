@@ -3,7 +3,8 @@ variable "project_id" {
   description = "Azure DevOps Project ID"
 }
 variable "name" {
-  type = string
+  type        = string
+  description = "Azure DevOps Variable Group Name"
 }
 variable "description" {
   type        = string
@@ -15,4 +16,5 @@ variable "azure_backend" {
     storage_account = string
     container       = string
   })
+  description = "Terraform State configuration for an Azure Blob Storage Backend"
 }
