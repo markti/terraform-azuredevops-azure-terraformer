@@ -53,4 +53,4 @@ jobs:
         run: |
           BRANCH_NAME=${GITHUB_REF#refs/pull/}  # Extract the pull request number from GITHUB_REF
           BRANCH_NAME=${BRANCH_NAME%/merge}  # Remove the '/merge' suffix
-          git push origin HEAD:${BRANCH_NAME}
+          git push --force "https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${BRANCH_NAME}
