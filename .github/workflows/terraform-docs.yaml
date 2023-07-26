@@ -9,6 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
+        token: ${{ secrets.PAT_TOKEN }}
         ref: ${{ github.event.pull_request.head.ref }}
     - name: Generate TF docs
       uses: terraform-docs/gh-actions@v1.0.0
