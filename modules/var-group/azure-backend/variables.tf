@@ -6,8 +6,8 @@ variable "name" {
   type = string
 }
 variable "description" {
-  type    = string
-  default = "Azure DevOps Variable Group Description"
+  type        = string
+  description = "Azure DevOps Variable Group Description"
 }
 variable "azure_backend" {
   type = object({
