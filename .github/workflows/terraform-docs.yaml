@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '**/*.tf'  # Adjust the path pattern as per your Terraform files location
+  pull_request:
+    branches:
+      - main  # Replace 'main' with the desired target branch
 
 jobs:
   terraform_docs:
