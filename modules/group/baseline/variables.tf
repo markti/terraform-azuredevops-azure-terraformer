@@ -3,7 +3,8 @@ variable "project_id" {
   description = "Azure DevOps Project ID"
 }
 variable "name" {
-  type = string
+  type        = string
+  description = "User Group Name"
 }
 variable "description" {
   type = string
