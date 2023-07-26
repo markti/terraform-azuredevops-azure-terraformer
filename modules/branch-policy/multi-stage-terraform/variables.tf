@@ -5,7 +5,8 @@ variable "environments" {
   }))
 }
 variable "project_id" {
-  type = string
+  type        = string
+  description = "Azure DevOps Project ID"
 }
 variable "min_reviewers_enabled" {
   type    = bool
