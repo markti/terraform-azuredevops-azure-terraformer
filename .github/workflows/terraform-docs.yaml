@@ -27,7 +27,7 @@ jobs:
       - name: Generate Terraform Docs
         run: |
           # Define the module paths you want to generate documentation for
-          MODULE_PATHS=("path/to/module1" "path/to/module2" "path/to/module3")
+          MODULE_PATHS=("modules/var-group/baseline" "modules/var-group/azure-credential" "modules/var-group/azure-backend")
           for path in "${MODULE_PATHS[@]}"; do
             ./terraform-docs markdown "$path" > "$path/README.md"
           done
