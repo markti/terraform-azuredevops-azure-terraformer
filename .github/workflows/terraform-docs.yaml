@@ -50,3 +50,7 @@ jobs:
         run: |
           git add ./**/*.md
           git commit -m "Update Terraform documentation [skip ci]"
+          
+      - name: Push changes
+        if: github.ref == 'refs/heads/main'  # Ensure we're on the main branch before pushing
+        run: git push origin main
