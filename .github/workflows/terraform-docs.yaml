@@ -24,11 +24,20 @@ jobs:
       - name: Install Terraform Docs
         run: curl -L "$(curl -s https://api.github.com/repos/terraform-docs/terraform-docs/releases/latest | jq -r '.assets[] | select(.name | test("terraform-docs-v0.16.0-linux-amd64.tar.gz")) | .browser_download_url')" > terraform-docs && chmod +x terraform-docs
 
+      - name: Load module paths
+        id: load_module_paths
+        run: |
+          # Read the modules.manifest file into an array
+          mapfile -t MODULE_PATHS < modules.manifest
+          # Remove any leading/trailing whitespace from each path
+          MODULE_PATHS=( "${MODULE_PATHS[@]/#/}" )
+          MODULE_PATHS=( "${MODULE_PATHS[@]/%#/}" )
+          echo "::set-output name=paths::${MODULE_PATHS[*]}"
+
       - name: Generate Terraform Docs
         run: |
-          # Define the module paths you want to generate documentation for
-          MODULE_PATHS=("path/to/module1" "path/to/module2" "path/to/module3")
-          for path in "${MODULE_PATHS[@]}"; do
+          # Use the module paths loaded from the previous step
+          for path in ${{ steps.load_module_paths.outputs.paths }}; do
             ./terraform-docs markdown "$path" > "$path/README.md"
           done
 
