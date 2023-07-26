@@ -13,8 +13,9 @@ variable "min_reviewers_enabled" {
   default = true
 }
 variable "min_reviewer_count" {
-  type    = number
-  default = 1
+  type        = number
+  description = "Minimum number of reviewers for pull requests to the main branch"
+  default     = 1
 }
 variable "work_item_linking_enabled" {
   type    = bool
