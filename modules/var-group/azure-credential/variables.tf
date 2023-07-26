@@ -3,11 +3,12 @@ variable "project_id" {
   description = "Azure DevOps Project ID"
 }
 variable "name" {
-  type = string
+  type        = string
+  description = "Azure DevOps Variable Group Name"
 }
 variable "description" {
-  type    = string
-  default = ""
+  type        = string
+  description = "Azure DevOps Variable Group Description"
 }
 variable "azure_credentials" {
   type = object({
@@ -16,4 +17,5 @@ variable "azure_credentials" {
     tenant_id       = string
     subscription_id = string
   })
+  description = "Azure Credentials that Terraform will use to authenticate with Azure"
 }

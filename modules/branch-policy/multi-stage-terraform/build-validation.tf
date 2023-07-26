@@ -7,7 +7,7 @@ resource "azuredevops_branch_policy_build_validation" "plan" {
   blocking   = true
 
   settings {
-    display_name        = "Terraform Plan on ${each.key} environment"
+    display_name        = "Terraform Plan on ${upper(each.key)} environment"
     build_definition_id = each.value.build_definition_id
     valid_duration      = 720
     filename_patterns = [
