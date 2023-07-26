@@ -6,7 +6,8 @@ variable "name" {
   type = string
 }
 variable "description" {
-  type = string
+  type        = string
+  description = "foo"
 }
 variable "members" {
   type = list(string)
