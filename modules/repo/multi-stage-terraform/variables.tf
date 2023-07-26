@@ -21,7 +21,8 @@ variable "environments" {
   )
 }
 variable "project_id" {
-  type = string
+  type        = string
+  description = "Azure DevOps Project ID"
 }
 variable "repo_name" {
   type = string
