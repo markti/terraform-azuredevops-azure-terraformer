@@ -27,8 +27,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_description"></a> [description](#input\_description) | Azure DevOps User Group Description | `string` | n/a | yes |
-| <a name="input_members"></a> [members](#input\_members) | n/a | `list(string)` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_members"></a> [members](#input\_members) | List of User IDs that should be included as members in this User Group | `list(string)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | Azure DevOps User Group Name | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Azure DevOps Project ID | `string` | n/a | yes |
 
 ## Outputs

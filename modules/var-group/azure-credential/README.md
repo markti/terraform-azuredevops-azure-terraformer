@@ -23,9 +23,9 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_azure_credentials"></a> [azure\_credentials](#input\_azure\_credentials) | n/a | <pre>object({<br>    client_id       = string<br>    client_secret   = string<br>    tenant_id       = string<br>    subscription_id = string<br>  })</pre> | n/a | yes |
-| <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `""` | no |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_azure_credentials"></a> [azure\_credentials](#input\_azure\_credentials) | Azure Credentials that Terraform will use to authenticate with Azure | <pre>object({<br>    client_id       = string<br>    client_secret   = string<br>    tenant_id       = string<br>    subscription_id = string<br>  })</pre> | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Azure DevOps Variable Group Description | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | Azure DevOps Variable Group Name | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Azure DevOps Project ID | `string` | n/a | yes |
 
 ## Outputs
