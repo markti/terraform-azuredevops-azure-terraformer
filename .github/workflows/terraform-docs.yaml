@@ -2,7 +2,7 @@ name: Terraform Docs
 
 on:
   pull_request:
-  
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -16,3 +16,4 @@ jobs:
         working-dir: .
         recursive: true
         recursive-path: modules
+        git-push: true
