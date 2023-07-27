@@ -13,6 +13,9 @@ A collection of Terraform modules that provision to Azure DevOps.
   - [Baseline User Group](./modules/group/baseline/README.md)
 
 ## Release History
+**1.0.11**
+- Add Module Library Table of Contents
+
 **1.0.10**
 - Update documentation
 - Auto-generate docs using GitHub actions terraform-docs
