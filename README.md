@@ -2,8 +2,8 @@
 A collection of Terraform modules that provision to Azure DevOps.
 
 - Multi-Stage Terraform Pipeline Solution
-  - [Branch Policy](./modules/branch-policy/multi-stage-terraform/README.md).
-  - [Pipeline](./modules/pipeline/multi-stage-terraform/README.md).
+  - [Branch Policy](./modules/branch-policy/multi-stage-terraform/README.md)
+  - [Pipeline](./modules/pipeline/multi-stage-terraform/README.md)
   - [Repository](./modules/repo/multi-stage-terraform/README.md)
 - Variable Group Modules
   - [Baseline Variable Group](./modules/var-group/baseline/README.md)
@@ -13,6 +13,9 @@ A collection of Terraform modules that provision to Azure DevOps.
   - [Baseline User Group](./modules/group/baseline/README.md)
 
 ## Release History
+**1.0.12**
+- Punctuation is evil
+
 **1.0.11**
 - Add Module Library Table of Contents
 
