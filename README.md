@@ -1,6 +1,17 @@
 # azdo-terraform-modules
 A collection of Terraform modules that provision to Azure DevOps.
 
+- Multi-Stage Terraform Pipeline Solution
+  - [Branch Policy](./modules/branch-policy/multi-stage-terraform/README.md).
+  - [Pipeline](./modules/pipeline/multi-stage-terraform/README.md).
+  - [Repository](./modules/repo/multi-stage-terraform/README.md)
+- Variable Group Modules
+  - [Baseline Variable Group](./modules/var-group/baseline/README.md)
+  - [Azure Credential Variable Group](./modules/var-group/azure-credential/README.md)
+  - [Azure Backend Variable Group](./modules/var-group/azure-backend/README.md)
+- User Group Modules
+  - [Baseline User Group](./modules/group/baseline/README.md)
+
 ## Release History
 **1.0.10**
 - Update documentation
