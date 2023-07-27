@@ -44,6 +44,6 @@
 
 | Name | Description |
 |------|-------------|
-| <a name="output_foo"></a> [foo](#output\_foo) | n/a |
-| <a name="output_reviewers"></a> [reviewers](#output\_reviewers) | n/a |
+| <a name="output_branch_policy_environments"></a> [branch\_policy\_environments](#output\_branch\_policy\_environments) | Intermediate value that is used to drive the branch policy creation for each environment. |
+| <a name="output_reviewers"></a> [reviewers](#output\_reviewers) | List of users that are added to our User Group |
 <!-- END_TF_DOCS -->

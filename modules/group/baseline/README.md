@@ -35,9 +35,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_descriptor"></a> [descriptor](#output\_descriptor) | n/a |
-| <a name="output_id"></a> [id](#output\_id) | n/a |
-| <a name="output_origin"></a> [origin](#output\_origin) | n/a |
-| <a name="output_origin_id"></a> [origin\_id](#output\_origin\_id) | n/a |
-| <a name="output_url"></a> [url](#output\_url) | n/a |
+| <a name="output_descriptor"></a> [descriptor](#output\_descriptor) | This is an internal Azure DevOps identifier that is prefixed with 'vssgp.' |
+| <a name="output_id"></a> [id](#output\_id) | This is a GUID but I'm not sure what it's used for |
+| <a name="output_origin"></a> [origin](#output\_origin) | The source system where the Group Principal originates from (e.g., vsts, aad, ad) |
+| <a name="output_origin_id"></a> [origin\_id](#output\_origin\_id) | This is a GUID value that uniquely identifies the User Group Principal within the origin |
+| <a name="output_url"></a> [url](#output\_url) | This is a fully qualified path to the User Group within Azure DevOps. |
 <!-- END_TF_DOCS -->
