@@ -13,6 +13,9 @@ A collection of Terraform modules that provision to Azure DevOps.
   - [Baseline User Group](./modules/group/baseline/README.md)
 
 ## Release History
+**1.0.13**
+- Lawyers are evil
+
 **1.0.12**
 - Punctuation is evil
 
