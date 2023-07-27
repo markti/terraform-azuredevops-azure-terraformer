@@ -2,6 +2,10 @@
 A collection of Terraform modules that provision to Azure DevOps.
 
 ## Release History
+**1.0.10**
+- Update documentation
+- Auto-generate docs using GitHub actions terraform-docs
+
 **1.0.8**
 - Upgraded to 0.7.0 of the `azuredevops` provider
 - Cleaned up `var-group\azure-credential` example
@@ -34,28 +38,3 @@ A collection of Terraform modules that provision to Azure DevOps.
 
 **1.0.0**
 - Added variable group baseline module and Azure Credential Var Group
-<!-- BEGIN_TF_DOCS -->
-## Requirements
-
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
