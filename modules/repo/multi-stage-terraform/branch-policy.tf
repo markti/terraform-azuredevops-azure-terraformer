@@ -8,7 +8,6 @@ locals {
   }
 }
 
-
 module "branching_policy" {
   source = "../../branch-policy/multi-stage-terraform"
 
