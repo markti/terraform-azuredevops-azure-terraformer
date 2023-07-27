@@ -32,5 +32,6 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | n/a |
+| <a name="output_id"></a> [id](#output\_id) | Azure DevOps Variable Group ID |
+| <a name="output_name"></a> [name](#output\_name) | Azure DevOps Variable Group Name |
 <!-- END_TF_DOCS -->

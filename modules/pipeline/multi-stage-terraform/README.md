@@ -42,6 +42,9 @@
 
 | Name | Description |
 |------|-------------|
-| <a name="output_apply_build_definition_id"></a> [apply\_build\_definition\_id](#output\_apply\_build\_definition\_id) | n/a |
-| <a name="output_plan_build_definition_id"></a> [plan\_build\_definition\_id](#output\_plan\_build\_definition\_id) | n/a |
+| <a name="output_apply_build_definition_id"></a> [apply\_build\_definition\_id](#output\_apply\_build\_definition\_id) | Unique Identifier of the Terraform Apply Build Definition |
+| <a name="output_azure_backend_var_group_name"></a> [azure\_backend\_var\_group\_name](#output\_azure\_backend\_var\_group\_name) | Azure DevOps Variable Group Name |
+| <a name="output_azure_credentials_var_group_name"></a> [azure\_credentials\_var\_group\_name](#output\_azure\_credentials\_var\_group\_name) | Azure DevOps Variable Group Name |
+| <a name="output_environment_name"></a> [environment\_name](#output\_environment\_name) | The Azure DevOps environment's name for this pipeline |
+| <a name="output_plan_build_definition_id"></a> [plan\_build\_definition\_id](#output\_plan\_build\_definition\_id) | Unique Identifier of the Terraform Plan Build Definition |
 <!-- END_TF_DOCS -->
