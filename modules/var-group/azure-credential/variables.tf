@@ -9,6 +9,7 @@ variable "name" {
 variable "description" {
   type        = string
   description = "Azure DevOps Variable Group Description"
+  default     = null
 }
 variable "azure_credentials" {
   type = object({
