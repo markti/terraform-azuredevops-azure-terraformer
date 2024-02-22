@@ -6,8 +6,9 @@ resource "azuredevops_branch_policy_comment_resolution" "main" {
 
   settings {
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }
@@ -25,8 +26,9 @@ resource "azuredevops_branch_policy_merge_types" "main" {
     allow_rebase_with_merge       = false
 
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }
@@ -52,8 +54,9 @@ resource "azuredevops_branch_policy_min_reviewers" "main" {
     on_push_reset_approved_votes           = true
 
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }
@@ -66,8 +69,9 @@ resource "azuredevops_branch_policy_work_item_linking" "main" {
 
   settings {
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }

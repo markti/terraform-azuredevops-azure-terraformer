@@ -13,6 +13,8 @@ module "branching_policy" {
 
   environments              = local.branch_policy_environments
   project_id                = var.project_id
+  repository_id             = azuredevops_git_repository.main.id
+  default_branch            = azuredevops_git_repository.main.default_branch
   min_reviewers_enabled     = var.min_reviewers_enabled
   min_reviewer_count        = var.min_reviewer_count
   work_item_linking_enabled = var.work_item_linking_enabled

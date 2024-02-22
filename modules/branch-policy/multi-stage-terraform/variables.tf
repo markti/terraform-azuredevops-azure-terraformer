@@ -13,6 +13,10 @@ variable "repository_id" {
   type        = string
   description = "Repository ID"
 }
+variable "default_branch" {
+  type        = string
+  description = "Repository default branch"
+}
 variable "min_reviewers_enabled" {
   type        = bool
   default     = true

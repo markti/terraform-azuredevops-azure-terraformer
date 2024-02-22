@@ -14,8 +14,9 @@ resource "azuredevops_branch_policy_build_validation" "plan" {
       each.value.working_directory
     ]
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }
@@ -33,8 +34,9 @@ resource "azuredevops_branch_policy_auto_reviewers" "main" {
     message            = "Terraform Reviewers"
 
     scope {
-      match_type    = "DefaultBranch"
-      repository_id = var.repository_id
+      match_type     = "Exact"
+      repository_id  = var.repository_id
+      repository_ref = var.default_branch
     }
   }
 }
