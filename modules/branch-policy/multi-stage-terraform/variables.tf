@@ -9,6 +9,10 @@ variable "project_id" {
   type        = string
   description = "Azure DevOps Project ID"
 }
+variable "repository_id" {
+  type        = string
+  description = "Repository ID"
+}
 variable "min_reviewers_enabled" {
   type        = bool
   default     = true
