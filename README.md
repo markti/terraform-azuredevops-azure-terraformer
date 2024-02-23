@@ -13,6 +13,15 @@ A collection of Terraform modules that provision to Azure DevOps.
   - [Baseline User Group](./modules/group/baseline/README.md)
 
 ## Release History
+**1.0.16**
+- Fix branch policy scoping so that it targets the newly created repository rather than applying the policy across all projects
+
+**1.0.15**
+- Fix naming conventions with the Variable Groups to avoid conflicts when provisioning multiple Terraform repositories to the same AzDO project
+
+**1.0.14**
+- Add a new sample that allows you to add a new Terraform repository with end-to-end Multi-Stage Terraform deployment pipeline to an existing AzDO project.
+
 **1.0.13**
 - Lawyers are evil
 
