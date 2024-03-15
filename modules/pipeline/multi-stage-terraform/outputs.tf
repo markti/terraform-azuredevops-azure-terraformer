@@ -10,11 +10,3 @@ output "environment_name" {
   value       = azuredevops_environment.main.name
   description = "The Azure DevOps environment's name for this pipeline"
 }
-output "azure_credentials_var_group_name" {
-  value       = module.azure_credential.name
-  description = "Azure DevOps Variable Group Name"
-}
-output "azure_backend_var_group_name" {
-  value       = module.azure_backend.name
-  description = "Azure DevOps Variable Group Name"
-}

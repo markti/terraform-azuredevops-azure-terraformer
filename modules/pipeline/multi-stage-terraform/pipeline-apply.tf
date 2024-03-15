@@ -15,10 +15,7 @@ resource "azuredevops_build_definition" "apply" {
   }
 
   # 6 clicks
-  variable_groups = [
-    module.azure_credential.id,
-    module.azure_backend.id
-  ]
+  variable_groups = var.variable_groups
 
   variable {
     name  = "ApplicationName"
